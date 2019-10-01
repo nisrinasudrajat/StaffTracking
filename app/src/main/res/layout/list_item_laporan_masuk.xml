@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="8"
+        android:id="@+id/laporan_awal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/laporan_hari_masuk"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFF"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/laporan_tanggal_masuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/laporan_awal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/laporan_akhir"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/laporan_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:layout_below="@id/laporan_awal" />
+
+        <TextView
+            android:layout_marginBottom="15dp"
+            android:id="@+id/laporan_keterangan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="masuk pada jam"
+            android:layout_below="@id/laporan_awal" />
+
+        <TextView
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/laporan_waktu_masuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu"
+            android:layout_below="@id/laporan_awal" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

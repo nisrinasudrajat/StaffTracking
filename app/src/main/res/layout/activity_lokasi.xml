@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFF"
+    >
+    <RelativeLayout
+        android:layout_width="346dp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:layout_weight=".7">
+
+        <TextView
+            android:background="@drawable/text_round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:textColor="#000"
+            android:text="DATA PERSONAL"
+            />
+
+        <LinearLayout
+            android:background="@drawable/bg_text"
+            android:id="@+id/layout_one"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="#000"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:text="NAMA :" />
+
+            <TextView
+                android:textColor="#000"
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Hello World!"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/bg_text"
+            android:id="@+id/layout_two"
+            android:layout_below="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6">
+
+            <TextView
+                android:textColor="#000"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:text="NIP :" />
+
+            <TextView
+                android:textColor="#000"
+                android:id="@+id/nip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/bg_text"
+            android:id="@+id/layout_three"
+            android:layout_below="@+id/layout_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6">
+
+            <TextView
+                android:textColor="#000"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:text="NAMA PAKET :" />
+
+            <TextView
+                android:textColor="#000"
+                android:id="@+id/nama_pkt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/bg_text"
+            android:id="@+id/layout_four"
+            android:layout_below="@+id/layout_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6">
+
+            <TextView
+                android:textColor="#000"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:text="PPK PJN :" />
+
+            <TextView
+                android:textColor="#000"
+                android:id="@+id/pp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/sendloc"
+            android:layout_width="65dp"
+            android:layout_height="29dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/layout_four"
+            android:text="Kirim Lokasi"
+            android:textSize="5dp" />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="346dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_weight=".3">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".LokasiActivity"
+            tools:layout="@layout/activity_lokasi" />
+</RelativeLayout>
+</LinearLayout>

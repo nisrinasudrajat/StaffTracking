@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaporankegiatanActivity"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukan Kegiatan"
+        android:textColor="#FFFF"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/mydate"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="270dp"
+        android:text="tanggal"
+        android:textColor="#FFFF"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/keterangan"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_round2"
+        android:ems="5"
+        android:gravity="top"
+        android:hint="Keterangan Anda"
+        android:textSize="12dp"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:paddingLeft="18dp"
+        android:paddingTop="3dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/Button"
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_submit"
+            android:drawableLeft="@drawable/ic_upload"
+            android:paddingLeft="10dp"
+            android:text="UPLOAD"
+            android:textColor="#FFFF"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/Btn"
+            android:layout_width="107dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_round"
+            android:text="SUBMIT"
+            android:textColor="#2a50fa"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/file"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="1dp"
+        android:textSize="10dp"
+        android:textColor="#FFFF"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:text="No File" />
+
+</LinearLayout>

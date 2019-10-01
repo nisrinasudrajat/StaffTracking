@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KehadiranActivity"
+    android:background="#FFF">
+
+    <TextClock
+        android:layout_marginTop="10dp"
+        android:id="@+id/textClock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm:ss a"
+        android:textSize="50sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimary"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/jarak_anda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jarak Anda dengan kantor adalah "
+        android:layout_below="@id/textClock"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="30dp"
+        android:textSize="15dp" />
+    <TextView
+        android:id="@+id/jarak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 KM"
+        android:layout_below="@id/textClock"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="262dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/akurasi"
+        android:textSize="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Akurasi jarak tergantung pada jaringan dan lokasi Anda"
+        android:layout_below="@id/jarak_anda"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="30dp"
+        android:paddingBottom="7dp"/>
+
+    <ImageView
+        android:id="@+id/user_photo"
+        android:padding="5dp"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:layout_below="@id/akurasi"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/border_blue"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/text_view_longlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_photo"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/longitude_presensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/latitude_presensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="7dp"
+        android:layout_below="@id/text_view_longlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tombol"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button_take_photo"
+            android:layout_marginLeft="35dp"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:text="TAKE PHOTO"
+            android:textColor="#FFF"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/ic_photo_camera"
+            android:background="@drawable/button_round_blue"/>
+
+        <Button
+            android:id="@+id/button_upload_photo"
+            android:layout_marginLeft="20dp"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:textAlignment="textStart"
+            android:text="SEND PHOTO"
+            android:textColor="#FFF"
+            android:paddingLeft="20dp"
+            android:background="@drawable/button_round_skyblue"
+            android:layout_marginRight="30dp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/ijin_tidak_hadir"
+        android:paddingTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IZIN TIDAK HADIR:"
+        android:layout_below="@id/tombol"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:paddingLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/presensi_box"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:hint="Absen/Tidak Hadir, Sakit, Cuti, Dll."
+        android:layout_below="@id/ijin_tidak_hadir"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:textSize="13sp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edit_text_border_blue"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/presensi_tombol"
+        android:text="SUBMIT"
+        android:textColor="#FFF"
+        android:layout_below="@id/presensi_box"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/button_round_blue"/>
+
+</RelativeLayout>
